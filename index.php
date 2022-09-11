@@ -33,8 +33,13 @@
             <label for="nombres">Nombres:</label>
             <input type="text" id="nombres" name="nombres" placeholder="nombres" class="form-control my-3"disabled>
           
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" class="form-control my-3"disabled placeholder="apellidos">
+            <label for="apellidos">Apellido Paterno:</label>
+            <input type="text" id="apellidoP" name="apellidos" class="form-control my-3"disabled placeholder="apellidoPaterno">
+
+            <label for="apellidos">Apellido Materno:</label>
+            <input type="text" id="apellidoM" name="apellidos" class="form-control my-3"disabled placeholder="apellidoMaterno">
+          
+          
           </div>
       </div>
 
@@ -108,7 +113,8 @@
       success:function(r){
         if(r.numeroDocumento==dni){
           $('#nombres').val(r.nombres);
-          $('#apellidos').val(r.apellidoMaterno);
+          $('#apellidoP').val(r.apellidoPaterno);
+          $('#apellidoM').val(r.apellidoMaterno);
         }else{
           alert('error');
         }

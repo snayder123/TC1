@@ -108,6 +108,7 @@
       success:function(r){
         if(r.numeroDocumento==dni){
           $('#nombres').val(r.nombres);
+          $('#apellidos').val(r.apellidoMaterno);
         }else{
           alert('error');
         }
